@@ -48,6 +48,19 @@ h2 .amber{color:var(--amber)}
   border-left:5px solid var(--amber);padding:26px 28px;border-radius:0 8px 8px 0;
   font-family:"Noto Serif TC",serif;font-size:17.5px;color:#efe7d7;margin-top:8px}
 
+/* body diagram */
+.bodyfig{display:grid;grid-template-columns:340px 1fr;gap:30px;align-items:center;
+  background:var(--card);border:1px solid #34291a;border-radius:12px;padding:28px 30px;margin:24px 0 6px}
+.bodyfig .leg{display:grid;gap:9px}
+.bodyfig .lrow{display:flex;align-items:baseline;gap:12px}
+.bodyfig .lnum{flex:none;width:26px;height:26px;border-radius:50%;background:var(--amber);
+  color:var(--ink);font-family:"Oswald",sans-serif;font-weight:700;font-size:14px;
+  display:flex;align-items:center;justify-content:center}
+.bodyfig .lz{font-family:"Oswald","Noto Serif TC",serif;font-weight:700;font-size:17px;color:var(--amber-lt)}
+.bodyfig .lw{font-size:13px;color:var(--muted);margin-left:6px}
+.bodyfig .cap{grid-column:1/-1;font-size:12.5px;line-height:1.6;color:var(--muted);
+  margin-top:6px;text-align:center;word-break:break-word}
+
 /* muscle grid */
 .mgrid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:26px}
 .mcard{background:var(--card);border:1px solid #34291a;border-radius:10px;padding:22px 22px 20px}
@@ -110,6 +123,7 @@ footer .src{margin-top:14px;display:grid;gap:5px}
   .stat{flex:1;min-width:calc(50% - 7px)}
   section{padding:44px 0}
   .mgrid{grid-template-columns:1fr}
+  .bodyfig{grid-template-columns:1fr;gap:20px;padding:22px 18px}
   .ex{grid-template-columns:1fr}
   .ex .vid video{height:auto;max-height:64vh}
   .week thead{display:none}
@@ -147,6 +161,16 @@ footer .src{margin-top:14px;display:grid;gap:5px}
   <div class="snum">02 · 肌肉地圖</div>
   <h2>後背你<span class="amber">平常少用到</span>的肌群</h2>
   <p class="sub">由淺到深、由上到下，逐塊拆給你看——它們各自負責什麼，以及為什麼久坐＋前側運動會讓它們關機。</p>
+  <div class="bodyfig">
+  <div class="fig"><svg viewBox="0 0 480 640" width="100%" style="height:auto;max-width:360px;display:block;margin:0 auto" role="img" aria-label="後側鏈肌肉背面圖">
+  <text x="14" y="24" font-family="Oswald,sans-serif" font-size="13" letter-spacing="2" fill="#9a8f7c">背面 · REAR VIEW</text>
+  <ellipse cx="240" cy="58" rx="27" ry="31" fill="#2c2417" stroke="#5c4d34" stroke-width="2.5"/><path d="M226,86 q14,10 28,0 l3,26 q-17,10 -34,0 Z" fill="#2c2417"/><path d="M224,108 Q170,116 144,150 Q132,172 144,196 L162,250 Q174,300 186,322 Q170,334 156,372 Q150,420 170,452 L182,452 Q210,466 240,458 Q270,466 298,452 L310,452 Q330,420 324,372 Q310,334 294,322 Q306,300 318,250 L336,196 Q348,172 336,150 Q310,116 256,108 Z" fill="#2c2417" stroke="#5c4d34" stroke-width="2.5" stroke-linejoin="round"/><path d="M144,152 q-20,8 -24,54 l-6,66 q0,10 10,10 q9,0 10,-10 l6,-60 q3,-40 10,-56 Z" fill="#2c2417" stroke="#5c4d34" stroke-width="2"/><path d="M336,152 q20,8 24,54 l6,66 q0,10 -10,10 q-9,0 -10,-10 l-6,-60 q-3,-40 -10,-56 Z" fill="#2c2417" stroke="#5c4d34" stroke-width="2"/><path d="M174,450 q-6,80 -10,150 q0,12 18,12 q16,0 18,-12 q-2,-90 4,-150 Z" fill="#2c2417" stroke="#5c4d34" stroke-width="2"/><path d="M306,450 q6,80 10,150 q0,12 -18,12 q-16,0 -18,-12 q2,-90 -4,-150 Z" fill="#2c2417" stroke="#5c4d34" stroke-width="2"/>
+  <path d="M144,150 q-14,20 -6,44 q22,6 34,-8 q-4,-26 -10,-38 Z" fill="#f2c778" opacity="0.95"/><path d="M336,150 q14,20 6,44 q-22,6 -34,-8 q4,-26 10,-38 Z" fill="#f2c778" opacity="0.95"/><path d="M240,124 L200,150 L214,210 L240,228 L266,210 L280,150 Z" fill="#c9821f" opacity="0.95"/><path d="M198,158 Q160,210 188,310 L222,290 L222,196 Z" fill="#c07d1e" opacity="0.9"/><path d="M282,158 Q320,210 292,310 L258,290 L258,196 Z" fill="#c07d1e" opacity="0.9"/><rect x="227" y="150" width="10" height="165" rx="5" fill="#e0a144"/><rect x="243" y="150" width="10" height="165" rx="5" fill="#e0a144"/><path d="M186,214 q-14,3 -20,10" stroke="#e8b25a" stroke-width="6" fill="none" stroke-linecap="round"/><path d="M294,214 q14,3 20,10" stroke="#e8b25a" stroke-width="6" fill="none" stroke-linecap="round"/><path d="M186,229 q-14,3 -20,10" stroke="#e8b25a" stroke-width="6" fill="none" stroke-linecap="round"/><path d="M294,229 q14,3 20,10" stroke="#e8b25a" stroke-width="6" fill="none" stroke-linecap="round"/><path d="M186,244 q-14,3 -20,10" stroke="#e8b25a" stroke-width="6" fill="none" stroke-linecap="round"/><path d="M294,244 q14,3 20,10" stroke="#e8b25a" stroke-width="6" fill="none" stroke-linecap="round"/><path d="M186,259 q-14,3 -20,10" stroke="#e8b25a" stroke-width="6" fill="none" stroke-linecap="round"/><path d="M294,259 q14,3 20,10" stroke="#e8b25a" stroke-width="6" fill="none" stroke-linecap="round"/><path d="M236,336 Q170,336 168,396 Q170,448 236,440 Z" fill="#cf8a26" opacity="0.95"/><path d="M244,336 Q310,336 312,396 Q310,448 244,440 Z" fill="#cf8a26" opacity="0.95"/><path d="M168,336 Q152,350 158,386 L176,372 Q178,346 186,334 Z" fill="#f4d18a" opacity="0.95"/><path d="M312,336 Q328,350 322,386 L304,372 Q302,346 294,334 Z" fill="#f4d18a" opacity="0.95"/>
+  <path d="M332,168 L418,96" stroke="#9a8f7c" stroke-width="1.4" fill="none" stroke-dasharray="4 4"/><circle cx="332" cy="168" r="3.2" fill="#f4efe4"/><circle cx="434" cy="96" r="14" fill="#14110d" stroke="#f4efe4" stroke-width="2"/><text x="434" y="101" text-anchor="middle" font-family="Oswald,sans-serif" font-size="16" font-weight="700" fill="#f4efe4">3</text><path d="M248,152 L418,150" stroke="#9a8f7c" stroke-width="1.4" fill="none" stroke-dasharray="4 4"/><circle cx="248" cy="152" r="3.2" fill="#f4efe4"/><circle cx="434" cy="150" r="14" fill="#14110d" stroke="#f4efe4" stroke-width="2"/><text x="434" y="155" text-anchor="middle" font-family="Oswald,sans-serif" font-size="16" font-weight="700" fill="#f4efe4">5</text><path d="M270,176 L418,210" stroke="#9a8f7c" stroke-width="1.4" fill="none" stroke-dasharray="4 4"/><circle cx="270" cy="176" r="3.2" fill="#f4efe4"/><circle cx="434" cy="210" r="14" fill="#14110d" stroke="#f4efe4" stroke-width="2"/><text x="434" y="215" text-anchor="middle" font-family="Oswald,sans-serif" font-size="16" font-weight="700" fill="#f4efe4">1</text><path d="M304,232 L418,270" stroke="#9a8f7c" stroke-width="1.4" fill="none" stroke-dasharray="4 4"/><circle cx="304" cy="232" r="3.2" fill="#f4efe4"/><circle cx="434" cy="270" r="14" fill="#14110d" stroke="#f4efe4" stroke-width="2"/><text x="434" y="275" text-anchor="middle" font-family="Oswald,sans-serif" font-size="16" font-weight="700" fill="#f4efe4">2</text><path d="M304,288 L418,330" stroke="#9a8f7c" stroke-width="1.4" fill="none" stroke-dasharray="4 4"/><circle cx="304" cy="288" r="3.2" fill="#f4efe4"/><circle cx="434" cy="330" r="14" fill="#14110d" stroke="#f4efe4" stroke-width="2"/><text x="434" y="335" text-anchor="middle" font-family="Oswald,sans-serif" font-size="16" font-weight="700" fill="#f4efe4">4</text><path d="M320,352 L418,392" stroke="#9a8f7c" stroke-width="1.4" fill="none" stroke-dasharray="4 4"/><circle cx="320" cy="352" r="3.2" fill="#f4efe4"/><circle cx="434" cy="392" r="14" fill="#14110d" stroke="#f4efe4" stroke-width="2"/><text x="434" y="397" text-anchor="middle" font-family="Oswald,sans-serif" font-size="16" font-weight="700" fill="#f4efe4">7</text><path d="M280,408 L418,452" stroke="#9a8f7c" stroke-width="1.4" fill="none" stroke-dasharray="4 4"/><circle cx="280" cy="408" r="3.2" fill="#f4efe4"/><circle cx="434" cy="452" r="14" fill="#14110d" stroke="#f4efe4" stroke-width="2"/><text x="434" y="457" text-anchor="middle" font-family="Oswald,sans-serif" font-size="16" font-weight="700" fill="#f4efe4">6</text>
+</svg></div>
+  <div class="leg"><div class="lrow"><span class="lnum">1</span><span><span class="lz">下斜方肌 + 菱形肌</span><span class="lw">中背，肩胛之間</span></span></div><div class="lrow"><span class="lnum">2</span><span><span class="lz">前鋸肌</span><span class="lw">肋骨側面</span></span></div><div class="lrow"><span class="lnum">3</span><span><span class="lz">後三角肌</span><span class="lw">肩膀後側</span></span></div><div class="lrow"><span class="lnum">4</span><span><span class="lz">闊背肌</span><span class="lw">腋下到下背</span></span></div><div class="lrow"><span class="lnum">5</span><span><span class="lz">豎脊肌 + 多裂肌</span><span class="lw">脊椎兩側深層</span></span></div><div class="lrow"><span class="lnum">6</span><span><span class="lz">臀大肌</span><span class="lw">臀部主體</span></span></div><div class="lrow"><span class="lnum">7</span><span><span class="lz">臀中肌</span><span class="lw">骨盆側面</span></span></div></div>
+  <div class="cap">背面示意圖（自繪，非 AI 生圖）。對稱肌群左右兩側皆標，編號對應下方卡片。</div>
+</div>
   <div class="mgrid">
   <div class="mcard">
   <div class="me">Lower Trapezius + Rhomboids</div>
