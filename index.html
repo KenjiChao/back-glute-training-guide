@@ -1,0 +1,438 @@
+<!doctype html><html lang="zh-Hant"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>後側鏈訓練指南 — 把久坐睡著的肌肉練回來</title>
+<meta name="description" content="針對久坐＋足球網球族群，用單槓＋彈力帶把背部、臀部這些少用到的後側肌群練起來。每個動作附真人示範小循環影片與練到的肌肉。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Noto+Serif+TC:wght@600;700&family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#14110d; --ink2:#1e1a14; --paper:#f4efe4; --amber:#e0a144;
+  --amber-lt:#f2c778; --amber-dk:#b4761e; --line:#3a332800; --muted:#8c8272;
+  --card:#20191180; }
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--ink);color:var(--paper);
+  font-family:"Noto Sans TC",system-ui,sans-serif;line-height:1.75;
+  -webkit-font-smoothing:antialiased}
+img,video{max-width:100%;display:block}
+a{color:var(--amber-lt);text-decoration:none}
+.wrap{max-width:940px;margin:0 auto;padding:0 40px}
+
+/* hero */
+.hero{padding:78px 0 54px;border-bottom:3px solid var(--amber)}
+.kicker{font-family:"Oswald",sans-serif;letter-spacing:.32em;text-transform:uppercase;
+  color:var(--amber);font-size:14px;font-weight:600}
+h1{font-family:"Oswald","Noto Serif TC",serif;font-weight:700;
+  font-size:clamp(34px,7vw,62px);line-height:1.05;margin:18px 0 20px;letter-spacing:.01em}
+h1 .amber{color:var(--amber)}
+.lede{font-family:"Noto Serif TC",serif;font-size:clamp(17px,2.4vw,21px);
+  color:#e9e1d2;max-width:680px}
+.stats{display:flex;gap:14px;flex-wrap:wrap;margin-top:34px}
+.stat{background:var(--amber);color:var(--ink);padding:14px 20px;border-radius:4px;min-width:120px}
+.stat b{font-family:"Oswald",sans-serif;font-size:30px;display:block;line-height:1}
+.stat span{font-size:13px;font-weight:600;letter-spacing:.04em}
+
+/* section shell */
+section{padding:60px 0;border-bottom:1px solid #2b241a}
+.snum{font-family:"Oswald",sans-serif;font-size:15px;letter-spacing:.3em;
+  color:var(--amber-dk);font-weight:600;text-transform:uppercase}
+h2{font-family:"Oswald","Noto Serif TC",serif;font-weight:700;
+  font-size:clamp(26px,4.5vw,40px);margin:8px 0 8px;color:var(--paper)}
+h2 .amber{color:var(--amber)}
+.sub{color:#cdc3b2;font-size:16px;max-width:720px;margin-bottom:14px}
+
+/* diagnosis callout */
+.diag{background:linear-gradient(180deg,#241c11,#1a150e);
+  border-left:5px solid var(--amber);padding:26px 28px;border-radius:0 8px 8px 0;
+  font-family:"Noto Serif TC",serif;font-size:17.5px;color:#efe7d7;margin-top:8px}
+
+/* muscle grid */
+.mgrid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:26px}
+.mcard{background:var(--card);border:1px solid #34291a;border-radius:10px;padding:22px 22px 20px}
+.mcard .mz{font-family:"Oswald","Noto Serif TC",serif;font-weight:700;font-size:21px;color:var(--amber-lt)}
+.mcard .me{font-size:12.5px;letter-spacing:.08em;color:var(--muted);text-transform:uppercase;margin-bottom:2px}
+.mcard .mw{font-size:13px;color:#b8ad99;margin:6px 0 12px}
+.mcard .lbl{font-family:"Oswald",sans-serif;font-size:12px;letter-spacing:.14em;
+  color:var(--amber-dk);text-transform:uppercase;font-weight:600;display:block;margin-top:10px}
+.mcard p{font-size:14.5px;color:#ded4c2}
+
+/* exercise phase header */
+.phase{margin:44px 0 4px}
+.phase .pt{font-family:"Oswald","Noto Serif TC",serif;font-weight:700;font-size:24px;color:var(--amber)}
+.phase .pd{color:#c7bdac;font-size:15px;margin-top:2px}
+
+/* exercise cards */
+main{counter-reset:ex}
+.ex{background:var(--ink2);border:1px solid #34291a;border-radius:12px;overflow:hidden;
+  margin-top:20px;display:grid;grid-template-columns:minmax(0,340px) 1fr}
+.ex .vid{background:#0d0a06;position:relative;display:flex;align-items:center}
+.ex .vid video{width:100%;height:100%;object-fit:cover;background:#0d0a06}
+.ex .body{padding:22px 24px 20px}
+.ex .num{font-family:"Oswald",sans-serif;font-size:13px;letter-spacing:.2em;color:var(--amber-dk);font-weight:600}
+.ex .num::before{counter-increment:ex;content:counter(ex,decimal-leading-zero) " ／ 動作"}
+.ex h3{font-family:"Oswald","Noto Serif TC",serif;font-weight:700;font-size:24px;margin:3px 0 2px}
+.ex .en{font-size:13px;letter-spacing:.06em;color:var(--muted);text-transform:uppercase}
+.ex .sets{display:inline-block;background:var(--amber);color:var(--ink);font-weight:700;
+  font-size:14px;padding:4px 12px;border-radius:4px;margin:12px 0 4px;font-family:"Oswald",sans-serif}
+.tags{display:flex;gap:7px;flex-wrap:wrap;margin:12px 0 14px}
+.tag{background:#2c2114;border:1px solid var(--amber-dk);color:var(--amber-lt);
+  font-size:12.5px;padding:3px 11px;border-radius:20px;font-weight:600}
+.ex .how{font-size:15px;color:#e4dac8;margin-bottom:12px}
+.ex .cue{background:#241c11;border-left:3px solid var(--amber);padding:10px 14px;border-radius:0 6px 6px 0;
+  font-size:14px;color:#f0e7d6}
+.ex .cue b{color:var(--amber-lt)}
+.ex .cred{font-size:11.5px;color:var(--muted);margin-top:12px}
+.ex .cred a{color:var(--muted);text-decoration:underline}
+
+/* weekly table -> cards on mobile */
+.week{width:100%;border-collapse:collapse;margin-top:22px}
+.week th,.week td{text-align:left;padding:13px 14px;border-bottom:1px solid #2b241a;vertical-align:top}
+.week th{font-family:"Oswald",sans-serif;color:var(--amber);letter-spacing:.1em;font-size:14px;text-transform:uppercase}
+.week td:first-child{font-family:"Oswald",sans-serif;font-weight:700;color:var(--amber-lt);white-space:nowrap}
+.week td:nth-child(2){color:#efe7d7;font-weight:600;white-space:nowrap}
+.week td:last-child{color:#c7bdac;font-size:14.5px}
+
+/* principles */
+.plist{margin-top:22px;display:grid;gap:14px}
+.prin{background:var(--card);border:1px solid #34291a;border-radius:10px;padding:20px 22px}
+.prin h4{font-family:"Oswald","Noto Serif TC",serif;font-size:18.5px;color:var(--amber-lt);margin-bottom:6px}
+.prin p{font-size:14.5px;color:#ded4c2}
+
+footer{padding:44px 0 60px;color:var(--muted);font-size:13.5px}
+footer a{color:var(--amber-dk)}
+footer .src{margin-top:14px;display:grid;gap:5px}
+
+@media(max-width:760px){
+  .wrap{padding:0 20px}
+  .hero{padding:54px 0 40px}
+  .stat{flex:1;min-width:calc(50% - 7px)}
+  section{padding:44px 0}
+  .mgrid{grid-template-columns:1fr}
+  .ex{grid-template-columns:1fr}
+  .ex .vid video{height:auto;max-height:64vh}
+  .week thead{display:none}
+  .week,.week tbody,.week tr,.week td{display:block;width:100%}
+  .week tr{border:1px solid #34291a;border-radius:10px;margin-bottom:12px;padding:6px 4px;background:var(--card)}
+  .week td{border:none;padding:6px 16px}
+  .week td:first-child{font-size:19px;padding-top:12px}
+  .week td:nth-child(2)::before{content:"重點：";color:var(--amber-dk)}
+  .week td:last-child::before{content:"內容：";color:var(--amber-dk);display:block;font-size:12px;margin-top:2px}
+}
+</style>
+</head><body>
+
+<header class="hero"><div class="wrap">
+  <div class="kicker">後側鏈 · Posterior Chain</div>
+  <h1>把久坐<span class="amber">睡著的肌肉</span><br>練回來</h1>
+  <p class="lede">足球、網球都是「往前推、往前衝、往前揮」——前側一直在用，背部和臀部這些後側肌群幾乎全被跳過。這份指南針對你的狀況，用家裡的單槓＋彈力帶，把它們一塊一塊叫醒。每個動作都有<strong>真人示範小循環影片</strong>，並標清楚練到哪塊肌肉。</p>
+  <div class="stats">
+    <div class="stat"><b>11</b><span>個動作</span></div>
+    <div class="stat"><b>7</b><span>塊少用肌群</span></div>
+    <div class="stat"><b>2–3</b><span>次／週</span></div>
+    <div class="stat"><b>單槓+帶</b><span>零額外器材</span></div>
+  </div>
+</div></header>
+
+<main>
+
+<section><div class="wrap">
+  <div class="snum">01 · 你的狀況</div>
+  <h2>你缺的不是力量，是<span class="amber">四塊被跳過的肌肉</span></h2>
+  <div class="diag">你不缺「拉的力量」——8 下引體證明闊背有料。你缺的是四塊：① 肩胛的內收下壓控制（下斜方＋菱形＋前鋸）② 水平拉方向的中背 ③ 後三角 ④ 臀的主動啟動。足球、網球都是往前推、往前衝、往前揮的運動，前側鏈一直在用，後側鏈幾乎全被跳過。把這四塊補起來，圓肩、背無力、骨盆前傾會一起改善。</div>
+</div></section>
+
+<section><div class="wrap">
+  <div class="snum">02 · 肌肉地圖</div>
+  <h2>後背你<span class="amber">平常少用到</span>的肌群</h2>
+  <p class="sub">由淺到深、由上到下，逐塊拆給你看——它們各自負責什麼，以及為什麼久坐＋前側運動會讓它們關機。</p>
+  <div class="mgrid">
+  <div class="mcard">
+  <div class="me">Lower Trapezius + Rhomboids</div>
+  <div class="mz">下斜方肌 + 菱形肌</div>
+  <div class="mw">位置：中背，兩片肩胛骨之間</div>
+  <span class="lbl">功能</span><p>把肩胛骨往下、往內收（後收下壓）。這是對抗圓肩駝背的核心引擎。</p>
+  <span class="lbl">為什麼你弱</span><p>久坐時肩胛整天往前、往上聳，這兩塊長期被拉長、關機。踢球揮拍完全用不到。你引體做得動但「背沒感覺」，通常就是這裡沒啟動、改用斜方上部聳肩代償。</p>
+</div>
+<div class="mcard">
+  <div class="me">Serratus Anterior</div>
+  <div class="mz">前鋸肌</div>
+  <div class="mw">位置：肋骨側面，像手指一樣包住肩胛下緣</div>
+  <span class="lbl">功能</span><p>讓肩胛「貼著肋廓滑動」，是所有過頭動作的穩定器。</p>
+  <span class="lbl">為什麼你弱</span><p>幾乎沒人主動練。弱了會出現「翼狀肩胛」（肩胛骨後緣翹起來）。它跟下斜方是一對搭檔，一起決定你的肩胛穩不穩。</p>
+</div>
+<div class="mcard">
+  <div class="me">Posterior Deltoid</div>
+  <div class="mz">後三角肌</div>
+  <div class="mw">位置：肩膀後側</div>
+  <span class="lbl">功能</span><p>把手臂往後、往外拉。</p>
+  <span class="lbl">為什麼你弱</span><p>胸推、揮拍、踢球全是前三角在動，後三角幾乎零刺激。前後失衡正是圓肩的推手。</p>
+</div>
+<div class="mcard">
+  <div class="me">Latissimus Dorsi</div>
+  <div class="mz">闊背肌</div>
+  <div class="mw">位置：從腋下到下背一大片</div>
+  <span class="lbl">功能</span><p>把手臂往下、往後拉（引體、划船的主力）。</p>
+  <span class="lbl">為什麼你弱</span><p>你 8 下引體主要就是它在做——力量其實有料。但多數人只練「垂直下拉」方向，缺「水平拉」（划船），導致中背厚度不足、肩胛內收無力。你缺的不是它，是它的搭檔。</p>
+</div>
+<div class="mcard">
+  <div class="me">Erector Spinae + Multifidus</div>
+  <div class="mz">豎脊肌 + 多裂肌</div>
+  <div class="mw">位置：沿脊椎兩側的深層小肌</div>
+  <span class="lbl">功能</span><p>撐直脊椎、抗彎抗旋。多裂肌是脊椎的「深層穩定器」。</p>
+  <span class="lbl">為什麼你弱</span><p>坐著時脊椎靠椅背，這組肌肉不用出力，久坐最先退化。你那個輕度骨盆前傾，跟這組跟核心的協調也有關。</p>
+</div>
+<div class="mcard">
+  <div class="me">Gluteus Maximus</div>
+  <div class="mz">臀大肌</div>
+  <div class="mw">位置：屁股主體</div>
+  <span class="lbl">功能</span><p>髖伸展的主引擎——站起、爬坡、衝刺的力量源。</p>
+  <span class="lbl">為什麼你弱</span><p>久坐造成「臀部失憶」：大腦跟臀肌的連線變弱，跑跳時改用大腿後側跟下背代償。這也是你踢球爆發力的天花板。</p>
+</div>
+<div class="mcard">
+  <div class="me">Gluteus Medius</div>
+  <div class="mz">臀中肌</div>
+  <div class="mw">位置：骨盆側面、臀大肌上緣</div>
+  <span class="lbl">功能</span><p>站在側面穩住骨盆。單腳落地、變向時的穩定器。</p>
+  <span class="lbl">為什麼你弱</span><p>網球足球其實很吃它（急停變向），但多數人從沒針對練過。弱了會膝蓋內夾、骨盆晃、落地不穩。</p>
+</div>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <div class="snum">03 · 動作庫</div>
+  <h2>訓練方案<span class="amber">（附真人示範）</span></h2>
+  <p class="sub">影片是無聲循環的真人示範片段（點文字連結可看原完整教學）。核心原則：垂直拉你已經夠了，重點補水平拉、後三角、肩胛啟動、臀。</p>
+  <div class="phase"><div class="pt">熱身喚醒</div><div class="pd">先叫醒睡著的肌肉，5 分鐘。不先啟動，後面做划船還是會用手臂代償。</div></div>
+<div class="ex">
+  <div class="vid">
+    <video autoplay muted loop playsinline preload="none"
+      data-src="clips/pull_apart.mp4"></video>
+  </div>
+  <div class="body">
+    <div class="num"></div>
+    <h3>彈力帶擴胸撕帶</h3><div class="en">Band Pull-apart</div>
+    <span class="sets">2 × 20 下</span>
+    <div class="tags"><span class="tag">菱形肌</span><span class="tag">後三角肌</span><span class="tag">中斜方</span></div>
+    <div class="how">雙手與肩同寬握住彈力帶、手臂平舉向前，肩胛往中間夾、把帶子往兩側拉開到胸前，慢慢回。全程手肘微彎、不聳肩。</div>
+    <div class="cue"><b>關鍵：</b>想像用「兩片肩胛骨去夾一支筆」，不是用手臂拉。</div>
+    <div class="cred">動作示範影片：<a href="https://www.youtube.com/watch?v=vXcji-UoreQ" target="_blank" rel="noopener">AnaMarie Bruni（YouTube）</a></div>
+  </div>
+</div>
+<div class="ex">
+  <div class="vid">
+    <video autoplay muted loop playsinline preload="none"
+      data-src="clips/face_pull.mp4"></video>
+  </div>
+  <div class="body">
+    <div class="num"></div>
+    <h3>彈力帶臉部下拉</h3><div class="en">Band Face Pull</div>
+    <span class="sets">2 × 15 下</span>
+    <div class="tags"><span class="tag">後三角肌</span><span class="tag">下斜方肌</span><span class="tag">旋轉肌袖</span></div>
+    <div class="how">彈力帶綁在單槓（約臉高），雙手握帶往臉的方向拉，手肘往後上方打開，拉到雙手在耳朵兩側、擠中背，慢放。</div>
+    <div class="cue"><b>關鍵：</b>終點停 1 秒、把手肘往後「亮」出去——圓肩剋星動作。</div>
+    <div class="cred">動作示範影片：<a href="https://www.youtube.com/watch?v=AlTGQrDOd98" target="_blank" rel="noopener">Runna（YouTube）</a></div>
+  </div>
+</div>
+<div class="ex">
+  <div class="vid">
+    <video autoplay muted loop playsinline preload="none"
+      data-src="clips/glute_bridge.mp4"></video>
+  </div>
+  <div class="body">
+    <div class="num"></div>
+    <h3>臀橋</h3><div class="en">Glute Bridge</div>
+    <span class="sets">2 × 15 下</span>
+    <div class="tags"><span class="tag">臀大肌</span><span class="tag">核心</span></div>
+    <div class="how">躺地、屈膝、腳掌踩地與肩同寬，用臀部把髖往上頂到「肩-髖-膝一直線」，頂端夾臀停 2 秒，慢放。</div>
+    <div class="cue"><b>關鍵：</b>頂端「用屁股捏核桃」——喚醒臀大肌，解決久坐的臀部失憶。</div>
+    <div class="cred">動作示範影片：<a href="https://www.youtube.com/watch?v=ugbRWDwEnYU" target="_blank" rel="noopener">Elite Sports Medicine（YouTube）</a></div>
+  </div>
+</div>
+  <div class="phase"><div class="pt">主課表</div><div class="pd">一週 2–3 次、隔天做。重點補你最缺的水平拉、後三角、臀。</div></div>
+<div class="ex">
+  <div class="vid">
+    <video autoplay muted loop playsinline preload="none"
+      data-src="clips/pullup.mp4"></video>
+  </div>
+  <div class="body">
+    <div class="num"></div>
+    <h3>引體向上（重品質）</h3><div class="en">Pull-up</div>
+    <span class="sets">3 × 6–8 下</span>
+    <div class="tags"><span class="tag">闊背肌</span><span class="tag">下斜方肌</span><span class="tag">二頭肌</span></div>
+    <div class="how">正握單槓略寬於肩，下巴過槓前先「把肩胛往下沉」啟動背、再拉。下放 3 秒到手臂近伸直。</div>
+    <div class="cue"><b>關鍵：</b>你已經做得到 8 下——這裡不加量，改練「先沉肩胛再拉」、別聳肩用手臂代償。</div>
+    <div class="cred">動作示範影片：<a href="https://www.youtube.com/watch?v=VuX7uI9XLNU" target="_blank" rel="noopener">Kelsey Heenan（YouTube）</a></div>
+  </div>
+</div>
+<div class="ex">
+  <div class="vid">
+    <video autoplay muted loop playsinline preload="none"
+      data-src="clips/inverted_row.mp4"></video>
+  </div>
+  <div class="body">
+    <div class="num"></div>
+    <h3>反式划船</h3><div class="en">Inverted Row</div>
+    <span class="sets">3 × 10–12 下</span>
+    <div class="tags"><span class="tag">中斜方</span><span class="tag">菱形肌</span><span class="tag">闊背肌</span><span class="tag">後三角肌</span></div>
+    <div class="how">單槓調低（或用彈力帶輔助），身體躺到槓下、打直像木板，把胸口拉向槓，頂端夾肩胛停 1 秒，慢放。腳越往前越難。</div>
+    <div class="cue"><b>關鍵：</b>這是你最缺的「水平拉」王牌——補中背厚度＋肩胛內收，比垂直引體更該加強。</div>
+    <div class="cred">動作示範影片：<a href="https://www.youtube.com/watch?v=hXTc1mDnZCw" target="_blank" rel="noopener">BarBend（YouTube）</a></div>
+  </div>
+</div>
+<div class="ex">
+  <div class="vid">
+    <video autoplay muted loop playsinline preload="none"
+      data-src="clips/band_row.mp4"></video>
+  </div>
+  <div class="body">
+    <div class="num"></div>
+    <h3>彈力帶坐姿划船</h3><div class="en">Seated Band Row</div>
+    <span class="sets">3 × 15 下</span>
+    <div class="tags"><span class="tag">中斜方</span><span class="tag">菱形肌</span><span class="tag">闊背肌</span></div>
+    <div class="how">坐地伸腿，彈力帶繞過雙腳腳底，雙手往肚子方向拉，手肘貼身、肩胛後收，慢放。</div>
+    <div class="cue"><b>關鍵：</b>感受「中背」在拉、不是手臂。找不到感覺時終點停 2 秒擠中背，是建立連線最快的方法。</div>
+    <div class="cred">動作示範影片：<a href="https://www.youtube.com/watch?v=ovn27-bSHj4" target="_blank" rel="noopener">Vive Health（YouTube）</a></div>
+  </div>
+</div>
+<div class="ex">
+  <div class="vid">
+    <video autoplay muted loop playsinline preload="none"
+      data-src="clips/superman.mp4"></video>
+  </div>
+  <div class="body">
+    <div class="num"></div>
+    <h3>超人式</h3><div class="en">Superman</div>
+    <span class="sets">3 × 12 下</span>
+    <div class="tags"><span class="tag">豎脊肌</span><span class="tag">多裂肌</span><span class="tag">臀大肌</span></div>
+    <div class="how">趴地、雙手前伸，同時抬起雙手與雙腳離地，頂端停 2 秒，慢放。抬到有感即可、不用硬凹腰。</div>
+    <div class="cue"><b>關鍵：</b>練下背的深層穩定肌——久坐最先退化的一組。</div>
+    <div class="cred">動作示範影片：<a href="https://www.youtube.com/watch?v=lII2hY1m4AU" target="_blank" rel="noopener">Evolve Functional Fitness（YouTube）</a></div>
+  </div>
+</div>
+<div class="ex">
+  <div class="vid">
+    <video autoplay muted loop playsinline preload="none"
+      data-src="clips/bird_dog.mp4"></video>
+  </div>
+  <div class="body">
+    <div class="num"></div>
+    <h3>鳥狗式</h3><div class="en">Bird-dog</div>
+    <span class="sets">3 × 每側 10 下</span>
+    <div class="tags"><span class="tag">多裂肌</span><span class="tag">核心</span><span class="tag">臀大肌</span></div>
+    <div class="how">四足跪姿（手在肩下、膝在髖下），同時伸出「對側」的手與腳到與地面平行，穩住 2 秒不晃、收回換邊。</div>
+    <div class="cue"><b>關鍵：</b>重點是「骨盆不轉、不塌」——抗旋轉穩定，對你骨盆前傾特別好。</div>
+    <div class="cred">動作示範影片：<a href="https://www.youtube.com/watch?v=ZdAHe9_HeEw" target="_blank" rel="noopener">NASM（YouTube）</a></div>
+  </div>
+</div>
+<div class="ex">
+  <div class="vid">
+    <video autoplay muted loop playsinline preload="none"
+      data-src="clips/bulgarian.mp4"></video>
+  </div>
+  <div class="body">
+    <div class="num"></div>
+    <h3>保加利亞分腿蹲</h3><div class="en">Bulgarian Split Squat</div>
+    <span class="sets">3 × 每腿 10 下</span>
+    <div class="tags"><span class="tag">臀大肌</span><span class="tag">股四頭</span><span class="tag">臀中肌</span></div>
+    <div class="how">後腳背放在椅子/長凳上，前腳在前，身體略前傾往下蹲到前大腿接近水平，用前腳跟推回站直。</div>
+    <div class="cue"><b>關鍵：</b>片段示範者手持啞鈴＝進階；你先徒手，等穩了再手持彈力帶/重物。前膝對準腳尖、別內夾。</div>
+    <div class="cred">動作示範影片：<a href="https://www.youtube.com/watch?v=iBKPW8H9j7M" target="_blank" rel="noopener">MADAthletes（YouTube）</a></div>
+  </div>
+</div>
+<div class="ex">
+  <div class="vid">
+    <video autoplay muted loop playsinline preload="none"
+      data-src="clips/lateral_walk.mp4"></video>
+  </div>
+  <div class="body">
+    <div class="num"></div>
+    <h3>彈力帶側走</h3><div class="en">Lateral Band Walk</div>
+    <span class="sets">3 × 每側 12 步</span>
+    <div class="tags"><span class="tag">臀中肌</span></div>
+    <div class="how">彈力帶套在膝上方（或腳踝），半蹲、雙腳與肩同寬保持張力，往側邊橫走 12 步再走回。全程膝蓋往外撐、別往內塌。</div>
+    <div class="cue"><b>關鍵：</b>專練臀中肌，解決骨盆側向不穩、落地內夾。走的時候屁股外側要有燒灼感。</div>
+    <div class="cred">動作示範影片：<a href="https://www.youtube.com/watch?v=1LvxZrJFy9Y" target="_blank" rel="noopener">MedBridge（YouTube）</a></div>
+  </div>
+</div>
+  <div class="phase"><div class="pt">加分（每天可做）</div><div class="pd">隨時累積，不佔正式訓練時間。</div></div>
+<div class="ex">
+  <div class="vid">
+    <video autoplay muted loop playsinline preload="none"
+      data-src="clips/dead_hang.mp4"></video>
+  </div>
+  <div class="body">
+    <div class="num"></div>
+    <h3>死懸吊</h3><div class="en">Dead Hang</div>
+    <span class="sets">累積 60–90 秒</span>
+    <div class="tags"><span class="tag">握力</span><span class="tag">開肩</span><span class="tag">減壓脊椎</span></div>
+    <div class="how">正握單槓、全身放鬆掛著，肩膀不用刻意出力，讓體重被動把肩打開、脊椎拉長。分幾次累積到 60–90 秒。</div>
+    <div class="cue"><b>關鍵：</b>久坐族的救命動作——被動開肩、減壓脊椎、順便練握力。看電視時就能做。</div>
+    <div class="cred">動作示範影片：<a href="https://www.youtube.com/watch?v=bIfVCcu3Mj4" target="_blank" rel="noopener">Shaun Fitt（YouTube）</a></div>
+  </div>
+</div>
+</div></section>
+
+<section><div class="wrap">
+  <div class="snum">04 · 一週怎麼排</div>
+  <h2>可照做的<span class="amber">每週表</span></h2>
+  <p class="sub">隔天做、給後側鏈恢復。踢球打網球的日子當休息日，兩者不衝突。</p>
+  <table class="week">
+    <thead><tr><th>日子</th><th>重點</th><th>內容</th></tr></thead>
+    <tbody>
+    <tr><td>週一</td><td>主課表 A 組</td><td>引體 3×6-8 · 反式划船 3×10-12 · 彈力帶划船 3×15 · Face Pull 3×15 · 超人式 3×12</td></tr>
+<tr><td>週二</td><td>休 / 踢球打網球</td><td>後側鏈休息恢復</td></tr>
+<tr><td>週三</td><td>主課表 B 組</td><td>反式划船 3×12 · 保加利亞分腿蹲 3×10/腿 · 側走 3×12/側 · 臀橋 3×15 · 鳥狗式 3×10/側</td></tr>
+<tr><td>週四</td><td>休 / 踢球打網球</td><td>後側鏈休息恢復</td></tr>
+<tr><td>週五</td><td>主課表 A 組（或 B）</td><td>同週一，或依身體狀況換 B 組</td></tr>
+<tr><td>週末</td><td>自由 + 死懸吊</td><td>有空補死懸吊、擴胸撕帶；踢球打網球照常</td></tr>
+
+    </tbody>
+  </table>
+</div></section>
+
+<section><div class="wrap">
+  <div class="snum">05 · 三個判斷重點</div>
+  <h2>練的時候<span class="amber">記住這些</span></h2>
+  <div class="plist">
+  <div class="prin"><h4>「感覺不到背在用」比「重量不夠」更該先解決</h4><p>前兩週別急著加難度，每一下刻意想「肩胛先動」。找不到感覺時，划船在頂端停 2 秒擠中背，是最快建立神經連線的方法。</p></div>
+<div class="prin"><h4>彈力帶其實夠用很久</h4><p>背部啟動肌（下斜方、後三角、臀中）本來就是輕重量高次數在練，彈力帶剛好對口。等反式划船能輕鬆做 3×15，再考慮補一對啞鈴或進階動作。</p></div>
+<div class="prin"><h4>一週 2–3 次就好，不用天天</h4><p>這些睡著的肌肉需要恢復，加上你還有踢球打網球的量。隔天做、給後側鏈休息，長得才快。</p></div>
+  </div>
+</div></section>
+
+</main>
+
+<footer><div class="wrap">
+  <div>這份指南針對「久坐 + 足球網球」族群設計，聚焦後側鏈。動作示範影片為各健身／物理治療頻道的真人教學片段，僅作教學參考用途，版權歸原頻道所有；點每張卡片下方連結可看完整原片。</div>
+  <div>開始新的訓練前，若有舊傷或不適，先諮詢醫師或物理治療師。</div>
+  <div class="src"><strong style="color:#b4761e">示範影片來源</strong>
+  <div>· AnaMarie Bruni — <a href="https://www.youtube.com/watch?v=vXcji-UoreQ" target="_blank" rel="noopener">https://www.youtube.com/watch?v=vXcji-UoreQ</a></div>
+<div>· Runna — <a href="https://www.youtube.com/watch?v=AlTGQrDOd98" target="_blank" rel="noopener">https://www.youtube.com/watch?v=AlTGQrDOd98</a></div>
+<div>· Elite Sports Medicine — <a href="https://www.youtube.com/watch?v=ugbRWDwEnYU" target="_blank" rel="noopener">https://www.youtube.com/watch?v=ugbRWDwEnYU</a></div>
+<div>· Kelsey Heenan — <a href="https://www.youtube.com/watch?v=VuX7uI9XLNU" target="_blank" rel="noopener">https://www.youtube.com/watch?v=VuX7uI9XLNU</a></div>
+<div>· BarBend — <a href="https://www.youtube.com/watch?v=hXTc1mDnZCw" target="_blank" rel="noopener">https://www.youtube.com/watch?v=hXTc1mDnZCw</a></div>
+<div>· Vive Health — <a href="https://www.youtube.com/watch?v=ovn27-bSHj4" target="_blank" rel="noopener">https://www.youtube.com/watch?v=ovn27-bSHj4</a></div>
+<div>· Evolve Functional Fitness — <a href="https://www.youtube.com/watch?v=lII2hY1m4AU" target="_blank" rel="noopener">https://www.youtube.com/watch?v=lII2hY1m4AU</a></div>
+<div>· NASM — <a href="https://www.youtube.com/watch?v=ZdAHe9_HeEw" target="_blank" rel="noopener">https://www.youtube.com/watch?v=ZdAHe9_HeEw</a></div>
+<div>· MADAthletes — <a href="https://www.youtube.com/watch?v=iBKPW8H9j7M" target="_blank" rel="noopener">https://www.youtube.com/watch?v=iBKPW8H9j7M</a></div>
+<div>· MedBridge — <a href="https://www.youtube.com/watch?v=1LvxZrJFy9Y" target="_blank" rel="noopener">https://www.youtube.com/watch?v=1LvxZrJFy9Y</a></div>
+<div>· Shaun Fitt — <a href="https://www.youtube.com/watch?v=bIfVCcu3Mj4" target="_blank" rel="noopener">https://www.youtube.com/watch?v=bIfVCcu3Mj4</a></div>
+  </div>
+</div></footer>
+
+<script>
+// lazy-attach videos when near viewport (10+ clips, don't fetch all at once)
+(function(){
+  var vids=[].slice.call(document.querySelectorAll('video[data-src]'));
+  if(!('IntersectionObserver' in window)){vids.forEach(function(v){v.src=v.dataset.src;});return;}
+  var io=new IntersectionObserver(function(es){
+    es.forEach(function(en){
+      if(en.isIntersecting){var v=en.target;v.src=v.dataset.src;v.play().catch(function(){});io.unobserve(v);}
+    });
+  },{rootMargin:"300px 0px"});
+  vids.forEach(function(v){io.observe(v);});
+})();
+</script>
+</body></html>
